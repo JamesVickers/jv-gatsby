@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Overpass", sans-serif;
     margin: 0;
     line-height: 1.5;
-    background: ${props => props.theme.colorLight};
+    background: ${props => props.theme.colorWhite};
     color: ${props => props.theme.colorDark};
   }
   html, body, #___gatsby, #gatsby-focus-wrapper {
@@ -44,12 +44,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const Main = styled.div`
-  ${'' /* text-align: center; */}
-`
-
-const Page = styled.div`
   min-height: 100vh;
-  border: 20px solid ${props => props.theme.colorWhite};
+  margin: 2%;
 `
 
 class Layout extends Component {
@@ -64,9 +60,7 @@ class Layout extends Component {
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Page>
           <Main path={page}>{this.props.children}</Main>
-        </Page>
       </ThemeProvider>
     )
   }
