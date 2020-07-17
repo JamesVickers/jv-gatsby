@@ -1,22 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import styled from "styled-components"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import JvCircle from '../images/jv_circle.png'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+const H1Styles = styled.h1`
+    font-family: "title-font";
+    font-size: 3.5rem;
+    color: ${props => props.theme.colorDark};
+    margin: 0;
+`
+
+const ImmageStyles = styled.img`
+  height: 20%;
+  width: 20%;`
+
+const Home = props => (
+  <Layout location={props.location}>
+    <SEO title="home" />
+      <H1Styles>James Vickers,<br/> Full Stack Developer.</H1Styles>
+        <ImmageStyles     
+        src={JvCircle}
+        alt="Treetops Tech logo; seven small hexagons arranged in a circle."
+        aria-label="Treetops tech logo. Navigation link to homepage."/>
   </Layout>
 )
 
-export default IndexPage
+export default Home
