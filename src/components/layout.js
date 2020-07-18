@@ -5,7 +5,7 @@ import NProgress from "nprogress"
 
 const theme = {
   colorPrimary: "#ffe000",
-  colorSecondary: "#8cd4ff",
+  colorSecondary: "#6FC9E3",
   colorSecondaryHover: "#71add1",
   colorBlack: "#171717",
   colorDark: "#383838",
@@ -44,9 +44,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 const Main = styled.div`
-  margin: 20px;
+  margin: 5%;
 `
-
 const Page = styled.div`
   min-height: 100vh;
   border: 20px solid ${props => props.theme.colorWhite};
